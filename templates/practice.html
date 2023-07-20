@@ -1,0 +1,56 @@
+{%load static%}
+{% static "image" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Tourist Places</title>
+    <style>
+        .image-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .image-item {
+            text-align: center;
+            margin: 0 20px;
+          }
+          
+          .image-item img {
+            width: 400px; /* Adjust the image width as needed */
+            height: auto;
+          }
+          
+          .image-item h3 {
+            font-size: 18px;
+            margin-top: 10px;
+          }
+          
+          .image-item p {
+            font-size: 14px;
+            color: #616161;
+          }
+          #title
+          {
+            text-align:center;
+            padding: 30px 0px 20px ;
+          }
+          
+    </style>
+
+</head>
+<body>
+    <h2 id="title">Tourist Places</h2>
+    {% for i in obj%}
+    <div class="image-row">
+        <div class="image-item">
+          <img src="{{baseUrl}}\{{i.image}}" alt="Image 1">
+          <h3>{{i.title}}</h3>
+          <p>{{i.description}}</p>
+        </div>
+        {%endfor%}
+       
+</body>
+</html>

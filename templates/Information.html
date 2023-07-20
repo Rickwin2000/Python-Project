@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form
+        {
+            text-align:center;
+            margin-top:50px;
+        }
+        input
+        {
+            padding:10px 30px;
+            margin-right: 5px;
+            background-color: rgb(255, 255, 255);
+            font-size: 15px;
+            color:rgb(0, 105, 158);
+            border-color: rgb(10, 139, 204);
+        }
+                
+        .rectangle p 
+        {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(10, 139, 204);
+            margin-top: 5px;
+            background-color: rgb(208, 239, 255);
+            padding:10px 150px;
+            border-radius: 2px;
+
+        }
+
+    </style>
+</head>
+<body>
+    {% extends 'Display.html' %}
+    {% block content %}
+      <div class="rectangle">
+        <p>{{content}}</p>
+      </div>
+    {% endblock %}
+
+</body>
+</html>

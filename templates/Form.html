@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form
+        {
+            text-align:center;
+            margin-top:50px;
+        }
+        input
+        {
+            padding:10px 30px;
+            margin-right: 5px;
+            background-color: rgb(255, 255, 255);
+            font-size: 15px;
+            color:rgb(0, 105, 158);
+            border-color: rgb(10, 139, 204);
+        }
+    </style>
+</head>
+<body>
+    {% extends 'Display.html' %}
+    {% block content %}
+    <form action="/save_book/add/" method="GET">
+        {% csrf_token %}
+        <input type="text" name="author" placeholder="Author">
+        <input type="text" name="title" placeholder="Title">
+        <input type="date" name="publication_date" placeholder="Publication Date">
+        <input type="submit" value="Add" style="color:black; border-color:black">
+    </form>
+    {% endblock %}
+
+</body>
+</html>

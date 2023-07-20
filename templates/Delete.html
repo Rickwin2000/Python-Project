@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form
+        {
+            text-align:center;
+            margin-top:50px;
+        }
+        input
+        {
+            padding:10px 30px;
+            margin-right: 5px;
+            background-color: rgb(255, 255, 255);
+            font-size: 15px;
+            color:rgb(0, 105, 158);
+            border-color: rgb(10, 139, 204);
+        }
+
+        h3
+        {
+           text-align: center;
+           color:rgb(0, 105, 158);
+           padding:0px 20px 0px 0px;
+           font-size: 20px;
+
+        }
+        select
+        {
+            padding:10px 30px;
+            margin-right: 5px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    {% extends 'Display.html' %}
+    {% block content %}
+    <h3>Select a category to delete</h3>
+   <form action="/save_book/delete/" method="POST">
+    {% csrf_token %}
+   <select id="category" name="category" >
+        <option value="author">Author</option>
+        <option value="title">Title</option>
+        <option value="publication_date">Publication_Date</option>
+    </select>
+    <input type="text" placeholder="Enter details" name="details">
+    <input type="submit" value="Delete" style="color:black; border-color:black">
+</form>
+    {% endblock %}
+
+</body>
+</html>

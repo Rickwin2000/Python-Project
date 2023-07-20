@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        div 
+        {
+           display:flex;
+           justify-content:center;
+           
+        }
+        h2
+        {
+              text-align: center;
+              color:rgb(149, 103, 35);
+        }
+        h3
+        {
+            padding:0px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sqlite CRUD</h2>
+    {% for i in Books %}
+    <div>
+   <h3> {{i.title}}</h3>
+   <h3> {{i.author}}</h3>
+   <h3> {{i.publication_date}}</h3>
+</div>
+    {% endfor %}
+</body>
+</html>

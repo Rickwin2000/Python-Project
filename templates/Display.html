@@ -1,0 +1,60 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Dispaly Form</title>
+
+    <style>
+      button
+      {
+        padding:10px 30px;
+        margin:20px 30px;
+        border-width: 2px;
+        border-color: rgb(0, 105, 158);
+        border-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        background-color: rgb(0, 105, 158);
+        color:white
+      }
+      div
+      {
+        display: flex;
+        justify-content: center;
+
+      }
+
+      h1
+      {
+        text-align: center;
+        margin:50px 0px 30px 0px;
+        color:rgb(0, 105, 158);
+      }
+    </style>
+    
+</head>
+<body>
+  <nav>
+  <h1>Display of all Functions</h1>
+   <div>
+    <button id="add"  onclick="window.location.href = '/save_book/add_form/'">ADD</button>
+    <button id="update"  onclick="window.location.href = '/save_book/update/'">UPDATE</button>
+    <button id="delete" onclick="window.location.href = '/save_book/delete_form/'">DELETE</button>
+    <button id="view" onclick="window.location.href = '/save_book/view/'">VIEW</button>
+    </div>
+    <br>
+    <hr style="color:rgb(0, 105, 158);">
+    <br><br>
+   </nav>
+   <main>
+    {% block content %} {% endblock %}
+  </main>
+ 
+  </body>
+
+</html>
+
+    
+    
+   
